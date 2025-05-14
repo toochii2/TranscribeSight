@@ -4,7 +4,7 @@
 
 A comprehensive tool for comparing and analysing various speech-to-text transcription services including AssemblyAI, OpenAI Whisper, GPT-4o, Deepgram, and Google Gemini models.
 
-![TranscribeSight Dashboard](Images\1.png)
+![TranscribeSight Dashboard](https://github.com/toochii2/TranscribeSight/blob/main/Images/1.png)
 
 ## Features
 
