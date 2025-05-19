@@ -103,12 +103,7 @@ def load_api_keys():
             
     # Initialize custom prompt with default value if not present
     if 'custom_prompt' not in st.session_state:
-        st.session_state.custom_prompt = ("The following audio comes from a patient with dysarthria, "
-                                         "a speech disorder that often results in slow, slurred, or imprecise articulation. "
-                                         "Please transcribe carefully, capturing every word as best as possible. "
-                                         "IMPORTANT: Return ONLY the raw transcript text. Do not include ANY preambles like 'Transcript:' "
-                                         "or phrases like 'Here is the transcription'. Do not use ANY markdown formatting. "
-                                         "Provide only the transcribed text with nothing else.")
+        st.session_state.custom_prompt = ("")
                                          
     # Initialize prompt usage setting
     if 'use_prompt' not in st.session_state:
@@ -186,6 +181,10 @@ def api_keys_sidebar():
                 "Custom Prompt (for GPT and Gemini models)",
                 key="custom_prompt",
                 height=150,
+                placeholder=(
+               "IMPORTANT: Return ONLY the raw transcript text. Do not include ANY preambles like 'Transcript:' "
+               "or phrases like 'Here is the transcription'. Do not use ANY markdown formatting. "
+               "Provide only the transcribed text with nothing else."),
                 help="This prompt will be used by all GPT-4o and Google Gemini models"
             )
         
