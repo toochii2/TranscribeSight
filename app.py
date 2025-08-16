@@ -1076,7 +1076,7 @@ def transcribe_gemini_2_5_flash(audio_path, client):
         audio_file = client.upload_file(path=audio_path)
         
         # Choose the flash model for transcription
-        model = client.GenerativeModel(model_name="gemini-2.5-flash-preview-04-17")
+        model = client.GenerativeModel(model_name="gemini-2.5-flash")
         
         # Set prompt based on whether prompting is enabled
         if st.session_state.use_prompt:
@@ -3202,4 +3202,5 @@ def main():
         st.warning("Please enter and save API keys in the sidebar before processing files.")
 
 if __name__ == "__main__":
+
     main()
